@@ -22,6 +22,6 @@ def get_intent_and_entities(text):
 
 def process(text):
     translated = Translator().translate(text, src='auto', dest='en')
-    print("Translated:", translated.text, translated.src)
+    print("Translated: ", translated.text, translated.src)
     intent = get_intent_and_entities(translated.text)
     return intent, translated.src
